@@ -19,9 +19,6 @@ body {
 }
 
 div {
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
     display: flex;
     flex: 1 ;
     text-align: center;
@@ -29,6 +26,19 @@ div {
     justify-content: center;
 }
 
+.color {
+    border: 1px solid #000000;
+    width: 40px;
+    height: 40px;
+}
+
+.pixel {
+    border: 1px solid #000000;
+    width: 40px;
+    height: 40px;
+    float: left;
+
+}
 
 #pixel-board {
     display: flex;
