@@ -15,6 +15,7 @@ function PixelGenerator(length) {
   for (let i1 = 0; i1 < length; i1 += 1) {
     const pixel = document.createElement('div');
     pixel.classList.add('pixel');
+    pixel.style.backgroundColor = '#FFFFFF';
     pixelBoard.style.width = `${Math.sqrt(length) * 40}px`;
     pixelBoard.appendChild(pixel);
   }
