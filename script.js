@@ -5,10 +5,16 @@ for (let i = 0; i < 4; i += 1) {
   document.getElementById('color-palette').appendChild(div);
 }
 
-document.querySelectorAll('.color')[0].style.backgroundColor = '#000000';
-document.querySelectorAll('.color')[1].style.backgroundColor = '#7FFFD4';
-document.querySelectorAll('.color')[2].style.backgroundColor = '#DAA520';
-document.querySelectorAll('.color')[3].style.backgroundColor = '#FF00FF';
+const pixelColor1 = document.querySelectorAll('.color')[0]
+pixelColor1.style.backgroundColor = '#000000';
+const pixelColor2 = document.querySelectorAll('.color')[1]
+pixelColor2.style.backgroundColor = '#7FFFD4';
+const pixelColor3 = document.querySelectorAll('.color')[2]
+pixelColor3.style.backgroundColor = '#DAA520';
+const pixelColor4 = document.querySelectorAll('.color')[3]
+pixelColor4.style.backgroundColor = '#FF00FF';
+
+
 const pixelBoard = document.getElementById('pixel-board');
 
 function PixelGenerator(length) {
@@ -23,9 +29,9 @@ function PixelGenerator(length) {
 
 PixelGenerator(25);
 
-// const inputSize = document.getElementById('board-size');
-// const buttonSendSize = document.getElementById('send-board-size');
-// buttonSendSize.addEventListener('click', PixelGenerator);
+function onSelectedLoad(){
+  pixelColor1.classList.add('selected');
+}
 
 const selectedColor = document.querySelectorAll('.color')[0].style.backgroundColor;
 selectedColor.className = 'selected';
