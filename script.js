@@ -50,3 +50,14 @@ pixelBoard.addEventListener('click', (event) => {
     event.target.style.backgroundColor = color;
   }
 });
+
+const button = document.getElementById('clear-board');
+
+button.addEventListener('click', clearPixel);
+
+function clearPixel() {
+  const allPixels = document.querySelectorAll('.pixel')
+  for (let ind = 0; ind < allPixels.length; ind += 1) {
+    allPixels[ind].style.backgroundColor = '#ffffff';
+  }
+};
