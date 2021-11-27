@@ -35,5 +35,6 @@ function onSelectedLoad(){
   pixelColor1.classList.add('selected');
 }
 
-const selectedColor = document.querySelectorAll('.color')[0].style.backgroundColor;
-selectedColor.className = 'selected';
+// const selectedColor = document.querySelectorAll('.color')[0].style.backgroundColor;
+// selectedColor.className = 'selected';
+
