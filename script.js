@@ -29,6 +29,8 @@ function PixelGenerator(length) {
 
 PixelGenerator(25);
 
+window.onload = onSelectedLoad;
+
 function onSelectedLoad(){
   pixelColor1.classList.add('selected');
 }
