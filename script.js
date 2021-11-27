@@ -27,7 +27,7 @@ function PixelGenerator(length) {
     pixelBoard.style.width = `${Math.sqrt(length) * 40}px`;
     pixelBoard.appendChild(pixel);
   }
-}
+};
 
 PixelGenerator(25);
 
@@ -35,11 +35,18 @@ window.onload = onSelectedLoad;
 
 function onSelectedLoad(){
   pixelColor1.classList.add('selected');
-}
-
+};
 
 colorPalette.addEventListener('click', (event) => {
   const pixelSelected = document.querySelector('.selected');
   pixelSelected.classList.remove('selected');
   event.target.classList.add('selected');
+});
+
+pixelBoard.addEventListener('click', (event) => {
+  if(event.target.classList.contains('pixel')){
+    const pixelSelected = document.querySelector('.selected');
+    const color = pixelSelected.style.backgroundColor;
+    event.target.style.backgroundColor = color;
+  }
 });
