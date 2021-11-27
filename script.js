@@ -5,6 +5,8 @@ for (let i = 0; i < 4; i += 1) {
   document.getElementById('color-palette').appendChild(div);
 }
 
+const colorPalette = document.getElementById('color-palette');
+
 const pixelColor1 = document.querySelectorAll('.color')[0]
 pixelColor1.style.backgroundColor = '#000000';
 const pixelColor2 = document.querySelectorAll('.color')[1]
@@ -35,6 +37,9 @@ function onSelectedLoad(){
   pixelColor1.classList.add('selected');
 }
 
-// const selectedColor = document.querySelectorAll('.color')[0].style.backgroundColor;
-// selectedColor.className = 'selected';
 
+colorPalette.addEventListener('click', (event) => {
+  const pixelSelected = document.querySelector('.selected');
+  pixelSelected.classList.remove('selected');
+  event.target.classList.add('selected');
+});
