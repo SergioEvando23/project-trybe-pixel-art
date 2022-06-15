@@ -8,17 +8,16 @@
     <title>Projeto pixels art</title>
 </head>
 <body>
-    <h1 id="title"> 
+    <h1 id="title">
         Paleta de Cores
     </h1>
     <main>
         <article id="color-palette"></article>
         <button id="clear-board" > Limpar </button>
         <div>
-            <input id="board-size" type="number" placeholder="Quantos quadros voce quer?" />
-            <button id="send-board-size">Enviar</button>
+            <input id="board-size" type="number" min="1" step="1" max="50" />
+            <button id="generate-board">VQV</button>
         </div>
-        
         <article id="pixel-board"></article>
     </main>
 
