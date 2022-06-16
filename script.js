@@ -5,6 +5,8 @@ for (let i = 0; i < 4; i += 1) {
   document.getElementById('color-palette').appendChild(div);
 }
 
+const boardPixel = document.getElementById('board-pixel');
+
 const colorPalette = document.getElementById('color-palette');
 
 const pixelColor1 = document.querySelectorAll('.color')[0];
@@ -24,6 +26,7 @@ function PixelGenerator(length) {
     pixel.classList.add('pixel');
     pixel.style.backgroundColor = '#FFFFFF';
     pixelBoard.style.width = `${Math.sqrt(length) * 40}px`;
+    pixelBoard.style.height = `${Math.sqrt(length) * 40}px`;
     pixelBoard.appendChild(pixel);
   }
 }
@@ -31,6 +34,8 @@ function PixelGenerator(length) {
 PixelGenerator(25);
 
 function onSelectedLoad() {
+  const widthBoard = 25 * 40 - 740;
+  boardPixel.style.width = widthBoard + "px";
   pixelColor1.classList.add('selected');
 }
 
@@ -66,11 +71,14 @@ const buttonVQV = document.getElementById('generate-board');
 
 buttonVQV.addEventListener('click', () => {
   let { value: inputValuePixel } = document.getElementById('board-size');
+  const widthBoard = (inputValuePixel * 40) + 60;
   if (inputValuePixel === '') {
     alert('Board inválido!');
   } else {
     pixelBoard.innerText = '';
     PixelGenerator(inputValuePixel * inputValuePixel);
+    console.log(inputValuePixel, 'input value')
+    boardPixel.style.width = widthBoard + "px";
     inputValuePixel = '';
   }
 });
