@@ -1,7 +1,21 @@
-for (let i = 0; i < 4; i += 1) {
+const faberCastellColors = [
+  ['Preto', '#000000'], ['Cinza', '#7A7A7A'], ['Marrom', '#7A3E1D'],
+  ['Marrom-claro', '#B87333'], ['Bege', '#E6C99A'], ['Amarelo', '#F7D21B'],
+  ['Amarelo-ouro', '#E6A817'], ['Laranja', '#F58220'], ['Vermelho', '#D8232A'],
+  ['Vermelho-carmim', '#A61F3D'], ['Rosa', '#F06A9A'], ['Rosa-claro', '#F6B1C3'],
+  ['Violeta', '#6D3B8E'], ['Roxo', '#8B4FA3'], ['Azul-escuro', '#173E79'],
+  ['Azul', '#2168B1'], ['Azul-claro', '#69B9E7'], ['Turquesa', '#37B9B6'],
+  ['Verde-escuro', '#236B3C'], ['Verde', '#45A44B'], ['Verde-claro', '#9DCB4C'],
+  ['Oliva', '#8A8F3A'], ['Pêssego', '#F0A57A'], ['Branco', '#FFFFFF'],
+];
+
+for (let i = 0; i < faberCastellColors.length; i += 1) {
   const div = document.createElement('div');
   div.className = 'color';
   div.class = 'color';
+  div.style.backgroundColor = faberCastellColors[i][1];
+  div.setAttribute('aria-label', faberCastellColors[i][0]);
+  div.setAttribute('title', faberCastellColors[i][0]);
   document.getElementById('color-palette').appendChild(div);
 }
 
@@ -10,13 +24,6 @@ const boardPixel = document.getElementById('board-pixel');
 const colorPalette = document.getElementById('color-palette');
 
 const pixelColor1 = document.querySelectorAll('.color')[0];
-pixelColor1.style.backgroundColor = '#000000';
-const pixelColor2 = document.querySelectorAll('.color')[1];
-pixelColor2.style.backgroundColor = '#7FFFD4';
-const pixelColor3 = document.querySelectorAll('.color')[2];
-pixelColor3.style.backgroundColor = '#DAA520';
-const pixelColor4 = document.querySelectorAll('.color')[3];
-pixelColor4.style.backgroundColor = '#FF00FF';
 
 const pixelBoard = document.getElementById('pixel-board');
 
