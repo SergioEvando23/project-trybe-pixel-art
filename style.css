@@ -35,7 +35,7 @@ main { display: grid; gap: 1.25rem; width: min(100% - 2rem, 1200px); margin: 0 a
 .control-label, label { color: var(--muted-ink); font-size: .8125rem; font-weight: 700; }
 
 #color-palette, #pixel-board { display: flex; flex-wrap: wrap; }
-#color-palette { gap: .5rem; justify-content: center; }
+#color-palette { gap: .5rem; justify-content: center; max-width: 42rem; }
 
 button, input { min-height: 2.75rem; border-radius: .625rem; font: inherit; }
 button { padding: 0 .9rem; border: 1px solid transparent; background: var(--accent); color: #fff; font-size: .875rem; font-weight: 700; cursor: pointer; transition: background-color .18s ease, transform .18s ease; }
