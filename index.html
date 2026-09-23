@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Projeto pixels art</title>
+    <title>Pixel Art</title>
 </head>
 <body>
-    <h1 id="title">
-        Paleta de Cores
-    </h1>
+    <header class="page-header">
+        <p class="eyebrow">Editor criativo</p>
+        <h1 id="title">Pixel Art</h1>
+        <p class="page-description">Escolha uma cor, desenhe no quadro e crie sua arte.</p>
+    </header>
     <main>
-        <div class="set-board">
-            <article id="color-palette"></article>
-            <button id="clear-board"> Limpar </button>
-            <div>
-                <input id="board-size" type="number" min="1" step="1" max="50" />
-                <button id="generate-board">VQV</button>
+        <section class="set-board" aria-labelledby="controls-title">
+            <h2 id="controls-title" class="visually-hidden">Controles do editor</h2>
+            <div class="palette-control">
+                <span class="control-label">Paleta de cores</span>
+                <article id="color-palette" aria-label="Paleta de cores"></article>
             </div>
-        </div>
-        <div id="board-pixel">
-            <article style="--index: 1;" id="pixel-board"></article>
-        </div>
+            <button id="clear-board" type="button">Limpar quadro</button>
+            <div class="size-control">
+                <label for="board-size">Tamanho</label>
+                <input id="board-size" type="number" min="1" step="1" max="50" inputmode="numeric" aria-describedby="size-hint" />
+                <span id="size-hint" class="visually-hidden">Digite um número entre 1 e 50</span>
+                <button id="generate-board" type="button">Gerar quadro</button>
+            </div>
+        </section>
+        <section id="board-pixel" aria-label="Área de desenho">
+            <article style="--index: 1;" id="pixel-board" aria-label="Quadro de pixels"></article>
+        </section>
     </main>
 
     <script src="script.js"></script>
