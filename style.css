@@ -21,7 +21,7 @@ body {
   background: linear-gradient(rgb(15 23 42 / 72%), rgb(15 23 42 / 72%)), url('./background.jpg') center / cover fixed;
 }
 
-.page-header { max-width: 720px; margin: 0 auto; padding: clamp(2.5rem, 7vw, 5rem) 1.5rem 2rem; color: #fff; }
+.page-header { max-width: 720px; margin: 0 auto; padding: clamp(1.25rem, 3vw, 2rem) 1.5rem 1.5rem; color: #fff; }
 .eyebrow { margin: 0 0 .5rem; color: #bae6fd; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 h1 { margin: 0; font-size: clamp(2.25rem, 6vw, 4rem); letter-spacing: -.04em; line-height: 1; }
 .page-description { max-width: 34rem; margin: 1rem auto 0; color: rgb(255 255 255 / 85%); font-size: clamp(1rem, 2vw, 1.125rem); line-height: 1.5; }
@@ -54,7 +54,7 @@ button:focus-visible, input:focus-visible, .color:focus-visible { outline: 3px s
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 @media (max-width: 640px) {
-  .page-header { padding-top: 2.5rem; }
+  .page-header { padding-top: 1.25rem; }
   .set-board { align-items: stretch; gap: 1rem; }
   .palette-control, .size-control { justify-content: center; width: 100%; }
   .size-control { flex-wrap: wrap; }

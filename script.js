@@ -38,10 +38,10 @@ function PixelGenerator(length) {
   }
 }
 
-PixelGenerator(25);
+PixelGenerator(100);
 
 function onSelectedLoad() {
-  const widthBoard = 25 * 40 - 740;
+  const widthBoard = (10 * 40) + 60;
   boardPixel.style.width = widthBoard + "px";
   pixelColor1.classList.add('selected');
 }
